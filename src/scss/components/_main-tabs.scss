@@ -1,0 +1,30 @@
+.main-tabs {
+  background-color: $main-nav;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid thin $header;
+  ul {
+    display: flex;
+    align-items: center; 
+    li {
+      display: inline-block;
+      line-height: 44px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
+      
+      padding: 0 25px;
+      transition: all 0.3s ease-in-out;
+      &:hover, &.active {
+        background-color: $base;
+      }
+      &.active {
+        border-left: solid thin $header;
+        border-right: solid thin $header;
+        color: $red;
+        height: 45px;
+      }
+    }
+  }
+}
