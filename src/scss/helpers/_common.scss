@@ -7,4 +7,9 @@ body {
   background-color: $base;
   font-size: 14px;
   font-family: 'Lato', sans-serif;
+  main {
+    height: calc(100vh - 94px);
+    overflow: hidden;
+    
+  }
 }

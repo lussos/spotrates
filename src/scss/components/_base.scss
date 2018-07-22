@@ -1,0 +1,111 @@
+.base {
+  background-color: $white;
+  border: solid thin $border;
+  height: calc(100% - 30px);
+  .base-header {
+    height: 40px;
+    border-bottom: solid thin $header;
+    display: flex;
+    justify-content: space-between;
+    nav {
+      ul {
+        display: flex;
+        li {
+          line-height: 40px;
+          padding: 0 30px;
+          opacity: .5;
+          cursor: pointer;
+          &.active {
+            color: $red;
+            border-right: solid thin $header;
+            border-left: solid thin $header;
+            border-bottom: solid thin $white;
+            height: 40px;          
+          }
+          &:hover, &.active {
+            opacity: 1;
+          }
+          &:first-child {
+            &.active {
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
+    .tools-right {
+      display: flex;
+      .best-rates {
+        padding: 0 30px;
+        height: 100%;
+        background-color: $header;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 40px;
+        transition: all .3s;
+        cursor: pointer;
+        color: $white;
+        &:hover {
+          background-color: lighten($header, 5%);
+          color: $black;
+        }
+        &:active {
+          background-color: darken($header, 5%);
+          color: $white;
+        }
+      }
+      .search-group {
+        height: 100%;
+        position: relative;
+        border-left: solid thin $header;
+        svg {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          width: 20px;
+          height: 20px;
+          opacity: .4;
+        }
+        input {
+          width: 250px;
+          height: 100%;
+          background-color: white;
+          border: none;
+          padding-left: 40px;
+          font-size: 14px;
+          &:focus {
+            background-color: lighten($base, 3%);
+          }
+        }    
+      }
+      .search-more {
+        width: 50px;
+        height: 100%;
+        display: block;
+        position: relative;
+        border-left: solid thin $header;
+        cursor: pointer;
+        svg {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover {
+          background-color: lighten($base, 3%);
+          svg {
+            fill: $red;
+          }
+        }
+      }
+    }
+  }
+  .base-content {
+    height: calc(100% - 40px);
+  }
+  .tab-content {
+    padding: 0 30px;
+  }
+}

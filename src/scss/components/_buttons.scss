@@ -1,0 +1,44 @@
+.btn {
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+  padding: 0 30px;
+  min-width: 120px;
+  text-align: center;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  outline: 0;
+  &.btn-red {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      background-color: lighten($red, 20%);
+    }
+    &:active {
+      background-color: darken($red, 15%);
+    }
+  }
+  &.btn-gray {
+    background-color: #777777;
+    color: $white;
+    &:hover {
+      background-color: lighten(#777777, 20%);
+    }
+    &:active {
+      background-color: darken(#777777, 15%);
+    }
+  }
+  &.btn-cancel {
+    background-color: #F3F2F2;
+    color: $black;
+    &:hover {
+      background-color: darken(#F3F2F2, 5%);
+    }
+    &:active {
+      background-color: darken(#F3F2F2, 15%);
+    }
+  }
+}

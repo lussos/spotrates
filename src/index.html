@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>SpotRates</title>
 
 	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 
@@ -16,7 +16,42 @@
 	<header class="header" include-html="components/header.html"></header>
 	<!-- Main Tabs -->
 	<nav class="main-tabs" include-html="components/main-tabs.html"></nav>
-	
+	<main>
+		<div class="tab-content active" id="ad-hoc">
+			<div class="tab-header">
+				<h4>SyncBoard</h4>
+				<button class="btn btn-red">New Quote</button>
+			</div>
+			<div class="base">
+				<div class="base-header">
+					<nav>
+						<ul>
+							<li class="active">Open</li>
+							<li>Closed</li>
+						</ul>
+					</nav>
+					<div class="tools-right">
+						<span class="best-rates">Current Best Rate</span>
+						<div class="search-group">
+							<svg class="icon-logout"><use xlink:href="fonts/icons.svg#icon-search-more"></use></svg>
+							<input type="text" placeholder="Search Origin/Destination…">
+						</div>
+						<span class="search-more" data-balloon="Search More" data-balloon-pos="up">
+							<svg class="icon-logout"><use xlink:href="fonts/icons.svg#icon-search-more"></use></svg>
+						</span>				
+					</div>
+				</div>
+				<div class="base-content">
+					<div class="tab-content active" id="open" include-html="components/open-quotes.html">
+
+					</div>
+					<div class="tab-content" id="close" >
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 	<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 

@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>SpotRates</title>
 
-	<link rel="stylesheet" href="style.392faf88fda036559e80.css?842190145b01a388e7c3">
+	<link rel="stylesheet" href="style.912fea96a19dc00f8940.css?8606fd147298f6aa1bd7">
 
 </head>
 
@@ -16,8 +16,43 @@
 	<header class="header" include-html="components/header.html"></header>
 	<!-- Main Tabs -->
 	<nav class="main-tabs" include-html="components/main-tabs.html"></nav>
-	
-	<script src="main.842190145b01a388e7c3.js?842190145b01a388e7c3"></script>
+	<main>
+		<div class="tab-content active" id="ad-hoc">
+			<div class="tab-header">
+				<h4>SyncBoard</h4>
+				<button class="btn btn-red">New Quote</button>
+			</div>
+			<div class="base">
+				<div class="base-header">
+					<nav>
+						<ul>
+							<li class="active">Open</li>
+							<li>Closed</li>
+						</ul>
+					</nav>
+					<div class="tools-right">
+						<span class="best-rates">Current Best Rate</span>
+						<div class="search-group">
+							<svg class="icon-logout"><use xlink:href="fonts/icons.svg#icon-search-more"></use></svg>
+							<input type="text" placeholder="Search Origin/Destination…">
+						</div>
+						<span class="search-more" data-balloon="Search More" data-balloon-pos="up">
+							<svg class="icon-logout"><use xlink:href="fonts/icons.svg#icon-search-more"></use></svg>
+						</span>				
+					</div>
+				</div>
+				<div class="base-content">
+					<div class="tab-content active" id="open" include-html="components/open-quotes.html">
+
+					</div>
+					<div class="tab-content" id="close" >
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="main.8606fd147298f6aa1bd7.js?8606fd147298f6aa1bd7"></script>
 </body>
 
 </html>
