@@ -1,0 +1,60 @@
+.table {
+  padding: 15px;
+  &.editable {
+    .thead {
+      display: table;
+      width: 100%;
+      line-height: 35px;
+      li {
+        display: table-cell;
+        text-align: center;
+        font-size: 12px;
+        vertical-align: middle;
+        width: 11.1111%;
+        svg {
+          width: 18px;
+          height: 35px;
+        }
+      }
+    }
+    .tbody {
+      border: solid thin $border;
+      background-color: $base;
+      ul {
+        display: table;
+        width: 100%;
+        li {
+          display: table-cell;
+          justify-content: space-between;
+          height: 35px;
+          border-left: solid thin $border;
+          border-bottom: solid thin $border;
+          width: 11.1111%;
+          text-align: center;
+          outline: none;
+          white-space: nowrap;
+          max-height: 35px;
+          padding-top: 8px;
+          &:focus {
+            background-color: lighten($base, 4%);
+          }
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
+      .add-row {
+        height: 35px;
+        line-height: 35px;
+        transition: all .3s;
+        cursor: pointer;
+        color: $red;
+        text-align: center;
+        &:hover {
+          background-color: lighten($base, 4%);
+          color: darken($red, 5%);
+        }
+      }
+    }
+  }
+}

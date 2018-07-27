@@ -20,7 +20,7 @@
 		<div class="tab-content active" id="ad-hoc">
 			<div class="tab-header">
 				<h4>SyncBoard</h4>
-				<button class="btn btn-red">New Quote</button>
+				<button class="btn btn-red" id="new-quote">New Quote</button>
 			</div>
 			<div class="base">
 				<div class="base-header">
@@ -51,7 +51,13 @@
 				</div>
 			</div>
 		</div>
+			<!-- New-Quote Side Panel -->
+	
 	</main>
+	<div class="side-panel" include-html="components/side-panel.html">
+		
+	</div>
+
 	<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 

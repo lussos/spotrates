@@ -1,0 +1,103 @@
+<div class="steps-header">
+  <nav>
+    <ul>
+      <li class="step-tab active">Origin & Destination</li>
+      <li class="step-tab">Shipment Details</li>
+      <li class="step-tab">Service & Delivery Date</li>
+      <li class="step-tab">Summary</li>
+    </ul>
+  </nav>
+</div>
+<div class="steps-content">
+  <div class="step active" id="step1">
+    <h6 class="description">Enter origin and destination</h6>
+    <form action="" class="row center">
+      <div class="col-4">
+        <div class="form-group custom-select">
+          <label for="">origin</label>
+          <select name="" id="">
+            <option value="0">Type or Select Origin</option>
+            <option value="1">New York (JFK)</option>
+            <option value="1">Milan (JFK)</option>
+          </select>
+        </div>
+        <div class="form-group custom-select">
+          <label for="">origin</label>
+          <select name="" id="">
+            <option value="0">Type or Select Origin</option>
+            <option value="1">New York (JFK)</option>
+            <option value="1">Milan (JFK)</option>
+          </select>
+        </div>
+      </div> 
+    </form>
+  </div>
+  <div class="step">
+    <h6 class="description">Enter shipment details(Total Gross Weight, Commodity, Number of pieces and Dimensions)</h6>
+    <div class="row center">
+      <div class="col-3">
+        <div class="form-group">
+          <label for="">Total Gross Weight(KG)</label>
+          <input type="text" placeholder="Total Amount">
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <label for="">Commodity</label>
+          <input type="text" value="Spare Parts">
+        </div>
+      </div>
+    </div>
+    <div class="table editable">
+      <ul class="thead">
+        <li>Pieces</li>
+        <li>Length(CM)</li>
+        <li>Width(CM)</li>
+        <li>Height(CM)</li>
+        <li>Volume(CBM)</li>
+        <li>Weight per piece(KG)</li>
+        <li>Weight sub-total(KG)</li>
+        <li>Stackable</li>
+        <li>
+          <svg class="icon-logout">
+            <use xlink:href="fonts/icons.svg#icon-trash"></use>
+          </svg>
+        </li>
+      </ul>
+      <div class="tbody">
+        <ul>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+          <li contenteditable="true"></li>
+        </ul>
+        <div class="add-row">+Add Row</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7">
+        <div class="uld">
+          <div class="uld-head">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="step">step 3</div>
+  <div class="step">step 4</div>
+</div>
+<div class="steps-footer">
+  <button class="btn btn-cancel" id="cancel">Cancel</button>
+  <button class="btn btn-gray" style="display: none" id="prevBtn">Prev</button>
+  <button class="btn btn-gray" id="nextBtn">Next</button>
+  <button class="btn btn-red" id="continue" style="display: none" >Continue</button>
+</div>

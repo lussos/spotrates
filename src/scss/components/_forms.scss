@@ -1,0 +1,64 @@
+.form-group {
+  height: 50px;
+  position: relative;
+  background-color: $base;
+  margin: 1px;
+  label {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 10px 0;
+    font-size: 14px;
+  }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+  input {
+    display:none;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 18px;
+    transition: .4s;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .4s;
+    }
+  }
+  input:checked + .slider {
+    background-color: $red;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $black;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+}
+

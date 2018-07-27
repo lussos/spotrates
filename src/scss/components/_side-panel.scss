@@ -1,0 +1,43 @@
+.side-panel {
+  width: 70%;
+  height: calc(100% - 50px);
+  margin-top: 50px;
+  transform: translateX(100%);
+  transition: all .3s ease-in-out;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: $base;
+  
+  &.active {
+    transform: translateX(0);
+    z-index: 2;
+  }
+  .panel-header {
+    background-color: $main-nav;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid thin $header;
+    .close-panel {
+      color: $red;
+      line-height: 44px;
+      cursor: pointer;
+      svg {
+        width: 22px;
+        height: 44px;
+        fill: $red;
+        float: left;
+        margin-left: 15px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .panel-content {
+    height: calc(100% - 44px);
+    padding: 20px 30px 30px;
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+}
