@@ -9,9 +9,9 @@
   </nav>
 </div>
 <div class="steps-content">
-  <div class="step active" id="step1">
+  <div class="step active center">
     <h6 class="description">Enter origin and destination</h6>
-    <form action="" class="row center">
+    <div class="row center">
       <div class="col-4">
         <div class="form-group custom-select">
           <label for="">origin</label>
@@ -30,7 +30,7 @@
           </select>
         </div>
       </div> 
-    </form>
+    </div>
   </div>
   <div class="step">
     <h6 class="description">Enter shipment details(Total Gross Weight, Commodity, Number of pieces and Dimensions)</h6>
@@ -59,9 +59,7 @@
         <li>Weight sub-total(KG)</li>
         <li>Stackable</li>
         <li>
-          <svg class="icon-logout">
-            <use xlink:href="fonts/icons.svg#icon-trash"></use>
-          </svg>
+         
         </li>
       </ul>
       <div class="tbody">
@@ -73,27 +71,196 @@
           <li contenteditable="true"></li>
           <li contenteditable="true"></li>
           <li contenteditable="true"></li>
-          <li contenteditable="true"></li>
-          <li contenteditable="true"></li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <svg class="icon-logout">
+              <use xlink:href="fonts/icons.svg#icon-trash"></use>
+            </svg>
+          </li>
         </ul>
         <div class="add-row">+Add Row</div>
       </div>
     </div>
-    <div class="row">
+    <div class="row gutter">
       <div class="col-7">
         <div class="uld">
           <div class="uld-head">
+            <h6>ULD</h6>
             <label class="switch">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
           </div>
+          <div class="uld-cont">
+            <div class="row">
+              <div class="col-4">
+                <div class="custom-select reg">
+                  <select name="" id="">
+                      <option value="0">ULD Type</option>
+                      <option value="1">Type 1</option>
+                      <option value="1">Type 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4">
+                <p>Gross Weight per ULD</p>
+              </div>
+              <div class="col-4">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="shipment-summary">
+          <h5>Shipment Summary</h5>
+          <h6>Total Pieces <span>7</span></h6>
+          <h6>Total Gross Weight(KG) <span>490</span></h6>
+          <h6>Total Volume(CBM) <span>7</span>9</h6>
+          <h6>Volumetric Weight(KG) <span>390.9</span></h6>
         </div>
       </div>
     </div>
   </div>
-  <div class="step">step 3</div>
-  <div class="step">step 4</div>
+  <div class="step center">
+      <h6 class="description">Select Service and Delivery Details at Origin. Add ETA Requested if needed.</h6>
+      <div class="row center">
+        <div class="col-4">
+          <div class="form-group custom-select">
+            <label for="">Type of Service</label>
+            <select name="" id="">
+              <option value="0">Select Service</option>
+              <option value="1">Service 1</option>
+              <option value="1">Service 2</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Delivery Date at Origin </label>
+            <svg class="icon-logout"><use xlink:href="fonts/icons.svg#icon-calendar"></use></svg>
+            <input type="text" class="datepicker" placeholder="mm/dd/yyyy">
+          </div>
+          <div class="form-group">
+            <label for="">Delivery Date at Origin </label>
+            <svg class="icon-logout"><use xlink:href="fonts/icons.svg#icon-calendar"></use></svg>
+            <input type="text" class="datepicker" placeholder="mm/dd/yyyy">
+          </div>
+        </div> 
+      </div>
+  </div>
+  <div class="step">
+    <h6 class="description">Check details and edit if necessary then send request to airlines by clicking “Send” button. </h6>
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="">Origin</label>
+          <input type="text" value="Milan(MXP)">
+        </div>
+        <div class="form-group">
+          <label for="">Destination</label>
+          <input type="text" value="New York(JFK)">
+        </div>
+        <div class="form-group">
+          <label for="">Commodity</label>
+          <input type="text" value="Spare Parts">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="">Number of pieces</label>
+          <input type="text" value="8">
+        </div>
+        <div class="form-group">
+          <label for="">Total Gross Weight(KG)</label>
+          <input type="text" value="1,400">
+        </div>
+        <div class="form-group">
+          <label for="">Volume(CBM)</label>
+          <input type="text" value="7.608">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="">Type of Service</label>
+          <input type="text" value="Standard">
+        </div>
+        <div class="form-group">
+          <label for="">Delivery Date ar Origin</label>
+          <input type="text" value="05/28/2018" class="datepicker">
+        </div>
+        <div class="form-group">
+          <label for="">ETA requested(optional) </label>
+          <input type="text" value="N/A">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="table editable">
+      <ul class="thead">
+        <li>Pieces</li>
+        <li>Length(CM)</li>
+        <li>Width(CM)</li>
+        <li>Height(CM)</li>
+        <li>Volume(CBM)</li>
+        <li>Weight per piece(KG)</li>
+        <li>Weight sub-total(KG)</li>
+        <li>Stackable</li>
+      </ul>
+      <div class="tbody">
+        <ul>
+          <li contenteditable="true">8</li>
+          <li contenteditable="true">120</li>
+          <li contenteditable="true">90</li>
+          <li contenteditable="true">2.4</li>
+          <li contenteditable="true">1.5</li>
+          <li contenteditable="true">15</li>
+          <li contenteditable="true">28</li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+        <ul>
+          <li contenteditable="true">8</li>
+          <li contenteditable="true">120</li>
+          <li contenteditable="true">90</li>
+          <li contenteditable="true">2.4</li>
+          <li contenteditable="true">1.5</li>
+          <li contenteditable="true">15</li>
+          <li contenteditable="true">28</li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+        <ul>
+          <li contenteditable="true">8</li>
+          <li contenteditable="true">120</li>
+          <li contenteditable="true">90</li>
+          <li contenteditable="true">2.4</li>
+          <li contenteditable="true">1.5</li>
+          <li contenteditable="true">15</li>
+          <li contenteditable="true">28</li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-editor"></div>
+  </div>
 </div>
 <div class="steps-footer">
   <button class="btn btn-cancel" id="cancel">Cancel</button>

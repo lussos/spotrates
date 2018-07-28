@@ -42,8 +42,10 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin ({
-      $: 'jquery'
+      $: 'jquery',
+      jQuery: "jquery"
     }),
+    
     new CleanWebpackPlugin('dist', {}),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css'
@@ -64,6 +66,12 @@ module.exports = {
       {from:'src/img',to:'img'},
       {from:'src/components',to:'components'},
       {from:'src/fonts',to:'fonts'}
-    ])
+    ]),
+    new webpack.ProvidePlugin({
+      trumbowyg: 'trumbowyg',
+       jQuery: 'jquery',
+       $: 'jquery',
+       'window.jQuery': 'jquery',
+     })
   ]
 };

@@ -1,5 +1,5 @@
 .table {
-  padding: 15px;
+  margin-bottom: 15px;
   &.editable {
     .thead {
       display: table;
@@ -20,26 +20,44 @@
     .tbody {
       border: solid thin $border;
       background-color: $base;
+      max-height: 260px;
+      overflow-y: scroll;
       ul {
         display: table;
         width: 100%;
+        border-bottom: solid thin $border;
+        &:last-child {
+          border-bottom: none;
+        }
         li {
           display: table-cell;
           justify-content: space-between;
           height: 35px;
           border-left: solid thin $border;
-          border-bottom: solid thin $border;
           width: 11.1111%;
           text-align: center;
           outline: none;
           white-space: nowrap;
           max-height: 35px;
           padding-top: 8px;
+          position: relative;
           &:focus {
             background-color: lighten($base, 4%);
           }
           &:first-child {
             border-left: none;
+          }
+          .checkbox {
+            position: absolute;
+            top: 7px;
+            left: 40%;
+          }
+          svg {
+            position: absolute;
+            top: 0px;
+            left: 45%;
+            width: 18px;
+            height: 35px;
           }
         }
       }

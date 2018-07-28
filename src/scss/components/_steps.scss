@@ -44,6 +44,7 @@
     .step {
       height: 100%;
       width: 100%;
+      padding: 0 15px;
       position: absolute;
       left: 100%;
       top: 0;
@@ -63,7 +64,7 @@
           margin-top: 15px;
           margin-bottom: 15px;
       }
-      &#step1 {
+      &.center {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -73,7 +74,35 @@
           
         }
       }
-      
+      .uld {
+        border: solid thin $border;
+        .uld-head {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+
+        }
+        .uld-cont {
+          padding: 10px;
+          p {
+            line-height: 40px;
+          }
+        }
+      }
+      .shipment-summary {
+        background-color: $base;
+        padding: 10px;
+        line-height: 30px;
+        h5 {
+          margin-bottom: 10px;
+        }
+        h6 {
+          span {
+            float: right;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
   .steps-footer {

@@ -3,9 +3,13 @@
   position: relative;
   select {
     display: none; /*hide original SELECT element:*/
-  }
+  } 
+}
+.custom-select {
+  select {
+    display: none; /*hide original SELECT element:*/
+  } 
   .select-selected {
-    
     &.select-arrow-active:after {
       border-color: transparent transparent $black transparent;
       top: 28px;
@@ -19,7 +23,7 @@
       height: 0;
       border: 4px solid transparent;
       border-color: $black transparent transparent transparent;
-    }
+    }  
   }
   .select-items div,.select-selected {
     color: rgba($black, .6);
@@ -31,6 +35,7 @@
     line-height: 45px;
     padding: 0 10px;
     border-bottom: solid thin $border;
+    height: 45px;
     &:last-child {
       border:none;
     }
@@ -52,5 +57,24 @@
   .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
   }
+  &.reg {
+    position: relative;
+    .select-selected {
+      color: rgba($black, .6);
+      padding: 14px 10px 0;
+      cursor: pointer;
+      height: 40px;
+      background-color: $base;
+      &.select-arrow-active:after {
+        border-color: transparent transparent $black transparent;
+        top: 15px;
+      }
+      &:after {
+        top: 20px;    
+      }  
+    }
+  
+  }
 }
+
 
