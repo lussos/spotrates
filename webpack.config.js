@@ -14,7 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js'
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     contentBase: './dist',
     open: true
@@ -30,20 +30,39 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
+          use: [
+          {
+            loader: "style-loader"
+          }, 
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: "css-loader", 
+            options: {
+                sourceMap: true
+            }
+          },
+          // {
+          //   loader: "postcss-loader"
+          // }, 
+          {
+            loader: "sass-loader", 
+            options: {
+                sourceMap: true
+            }
+          }
         ]
-      }
+      }     
     ]
   },
+  
   plugins: [
     new webpack.ProvidePlugin ({
       $: 'jquery',
-      jQuery: "jquery"
+      jQuery: "jquery",
+      'window.jQuery': 'jquery',
+      trumbowyg: 'trumbowyg',
     }),
     
     new CleanWebpackPlugin('dist', {}),
@@ -71,7 +90,7 @@ module.exports = {
       trumbowyg: 'trumbowyg',
        jQuery: 'jquery',
        $: 'jquery',
-       'window.jQuery': 'jquery',
-     })
+       
+     }),
   ]
 };

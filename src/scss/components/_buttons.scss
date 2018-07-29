@@ -8,9 +8,19 @@
   min-width: 120px;
   text-align: center;
   border-radius: 3px;
+  -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   cursor: pointer;
   outline: 0;
+  &.big {
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
   &.btn-red {
     background-color: $red;
     color: $white;

@@ -1,13 +1,16 @@
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
+
 body {
   background-color: $base;
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   position: relative;
+  -webkit-transition: all .3s;
   transition: all .3s;
   &:after {
     content: '';
@@ -16,14 +19,14 @@ body {
     height: calc(100% - 50px);
     left: 0;
     top: 50px;
-    background-color: rgba($black,.3);
+    background-color: rgba($black, .3);
     opacity: 0;
     visibility: hidden;
     z-index: -1;
   }
   &.side-panel-active {
+    -webkit-transition: all .3s;
     transition: all .3s;
-    
     &:after {
       content: '';
       opacity: 1;
@@ -35,5 +38,20 @@ body {
     height: calc(100vh - 94px);
     overflow: hidden;
     position: relative;
+    .advanced-search {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;    
+      -webkit-transition: height .4s, opacity .3s;
+      transition: height .3s, opacity .4s;
+      &.active {
+        height: 70px;
+        opacity: 1;
+        visibility: visible;
+        padding: 10px 30px;
+        // -webkit-transition: height .4s, opacity .3s;
+        // transition: height .3s, opacity .4s;
+      }
+    }
   }
 }

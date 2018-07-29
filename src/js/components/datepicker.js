@@ -2391,7 +2391,6 @@ export default function datePicker() {
       YearMonthPattern: "F, Y"
     };
   }());
-
   $('.datepicker').datetimepicker({
     timepicker: false,
     format: 'm/d/Y'

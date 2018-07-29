@@ -5,10 +5,16 @@
   .base-header {
     height: 40px;
     border-bottom: solid thin $header;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     nav {
       ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         li {
           line-height: 40px;
@@ -34,6 +40,8 @@
       }
     }
     .tools-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       .best-rates {
         padding: 0 30px;
@@ -42,6 +50,7 @@
         text-transform: uppercase;
         font-size: 12px;
         line-height: 40px;
+        -webkit-transition: all .3s;
         transition: all .3s;
         cursor: pointer;
         color: $white;
@@ -91,7 +100,8 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
         }
         &:hover {
           background-color: lighten($base, 3%);
@@ -99,11 +109,28 @@
             fill: $red;
           }
         }
+        &.active {
+          background-color: $red;
+          svg {
+            fill: $white;
+          }
+          &:hover {
+            background-color: darken($red, 5%);
+          svg {
+            fill: $white;
+          }
+          }
+        }
       }
     }
   }
   .base-content {
     height: calc(100% - 40px);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    &.sp-active {
+      height: calc(100% - 110px);
+    }
   }
   .tab-content {
     padding: 0 30px;

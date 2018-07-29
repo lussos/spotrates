@@ -31,7 +31,9 @@
         }
         li {
           display: table-cell;
-          justify-content: space-between;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
           height: 35px;
           border-left: solid thin $border;
           width: 11.1111%;
@@ -64,6 +66,7 @@
       .add-row {
         height: 35px;
         line-height: 35px;
+        -webkit-transition: all .3s;
         transition: all .3s;
         cursor: pointer;
         color: $red;
