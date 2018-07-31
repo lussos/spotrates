@@ -1,11 +1,9 @@
 .main-tabs {
   background-color: $main-nav;
   height: 44px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+ 
           justify-content: center;
   border-bottom: solid thin $header;
   ul {

@@ -21,6 +21,7 @@ module.exports = {
   },
   module: {
     rules: [
+      
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -42,10 +43,13 @@ module.exports = {
             options: {
                 sourceMap: true
             }
+          }, 
+          {
+            loader: 'postcss-loader',
+            options: {
+                sourceMap: true,              
+            }
           },
-          // {
-          //   loader: "postcss-loader"
-          // }, 
           {
             loader: "sass-loader", 
             options: {
@@ -53,7 +57,8 @@ module.exports = {
             }
           }
         ]
-      }     
+      } 
+         
     ]
   },
   
@@ -63,6 +68,7 @@ module.exports = {
       jQuery: "jquery",
       'window.jQuery': 'jquery',
       trumbowyg: 'trumbowyg',
+      datetimepick: 'datetimepick'
     }),
     
     new CleanWebpackPlugin('dist', {}),
@@ -75,6 +81,10 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/login.html',
+      filename: 'login.html'
+    }),
     new WebpackMd5Hash(),
     new StyleLintPlugin({
       configFile: './stylelint.config.js',
@@ -86,11 +96,5 @@ module.exports = {
       {from:'src/components',to:'components'},
       {from:'src/fonts',to:'fonts'}
     ]),
-    new webpack.ProvidePlugin({
-      trumbowyg: 'trumbowyg',
-       jQuery: 'jquery',
-       $: 'jquery',
-       
-     }),
   ]
 };

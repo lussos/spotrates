@@ -20,6 +20,9 @@
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
+  &.block {
+    width: 100%;
+  }
 }
   &.btn-red {
     background-color: $red;
@@ -50,5 +53,11 @@
     &:active {
       background-color: darken(#F3F2F2, 15%);
     }
+  }
+}
+a {
+  color: $red;
+  &:hover {
+    color: darken($red, 5%);
   }
 }

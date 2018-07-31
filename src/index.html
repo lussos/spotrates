@@ -9,10 +9,13 @@
 	<link rel="shortcut icon" type="image/png" href="img/sr-logo.png"/>
 
 	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
-
+	
 </head>
 
 <body>
+	<div class="loader">
+		<img src="img/logo-a.svg" alt="SpotRates">	 
+	</div>
 	<!-- Header -->
 	<header class="header" include-html="components/header.html"></header>
 	<!-- Main Tabs -->
@@ -136,15 +139,15 @@
 					</div>
 				</div>
 			</div>
-		</div>
-			<!-- New-Quote Side Panel -->
-	
+		</div>	
 	</main>
+	<!-- New-Quote Side Panel -->
 	<div class="side-panel" include-html="components/side-panel.html">
 		
 	</div>
 
 	<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+
 
 </body>
 

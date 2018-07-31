@@ -16,6 +16,7 @@
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
+    "datetimepick": "^2.4.0",
     "eslint": "^5.0.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.1",
